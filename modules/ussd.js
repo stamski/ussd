@@ -13,7 +13,8 @@ var ussd = (function(){
     var sessionID = parsedReqData.sessionID;
     var input = parsedReqData.input;
     var closeSession = parsedReqData.closeSession;
-    this.mongo.connect('mongodb://127.0.0.1:27017', function(err, db) {
+    //this.mongo.connect('mongodb://127.0.0.1:27017', function(err, db) {
+    this.mongo.connect('mongodb://heroku_app24665312:heroku_app24665312@ds031339.mongolab.com:31339/heroku_app24665312', function(err, db) {
       if(err) throw err;
       var USSDSession = db.collection('USSDSession');
       USSDSession.findOne({"_id" : sessionID}, function(err, sessionRecord) {
