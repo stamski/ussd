@@ -1,0 +1,29 @@
+"_id" : "send-money-amount",
+"options" : {
+	"0" : {
+		"text" : "back",
+		"goto" : "send-money-username"
+	}
+},
+"default" : {
+	"text" : "enter amount",
+	"goto" : "send-money-prompt"
+},
+"errors" : {
+	"validation" : {
+		"text" : "amount must be a number",
+		"goto" : "send-money-amount"
+	},
+	"operation" : {
+		"text" : "insufficient balance",
+		"goto" : "send-money-amount"
+	}
+}
+======================================================
+"_id" : "send-money-complete",
+"options" : {
+	"1" : {
+		"text" : "go to main menu",
+		"goto" : "operations"
+	}
+}
